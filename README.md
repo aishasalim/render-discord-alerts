@@ -18,7 +18,9 @@ The IDs of posted deploys go into `state.json`, so each failure posts only once.
 
 ## Security
 
-The Render API key controls the whole Render workspace. Keep this repo private and do not add collaborators.
+The Render API key controls the whole Render workspace. It lives only in the repository secrets, never in the code.
+The repo is public so scheduled runs use no paid Actions minutes. Secrets are not passed to workflows from forks.
+Do not add collaborators: anyone with write access can change the workflow and read the secrets.
 
 ## Notes
 
